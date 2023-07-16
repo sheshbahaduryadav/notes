@@ -10,12 +10,17 @@ const AddNotesUser = () => {
     let addby = JSON.parse(localStorage.getItem('user'))._id;
 
     const addNews =async () =>{
-
-        toast.success("Notes Add Succesfully !",{
-            position: "top-center",
-        }
-        );
-
+        if(topic===""&&subtopic===""&&content===""){
+            toast.error("All fields are mondatory !",{
+                position: "top-center",
+            }
+            );
+        }else{
+           
+                toast.success("Notes Add Succesfully !",{
+                    position: "top-center",
+         
+        });
         console.log(topic,subtopic,content,addby);
         let result = await fetch(`http://localhost:4500/addnotes-admin`, {
             method:'post',
@@ -32,6 +37,7 @@ const AddNotesUser = () => {
             // navigates('/readnotesadmin');
                        
     }
+}
 
   return (
     <>

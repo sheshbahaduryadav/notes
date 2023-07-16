@@ -38,7 +38,7 @@ const EditNotesAdmin = () =>{
 
   return (
     <>
-    <div className='container bg-primary mt-5 text-white'>
+    <div className='container bg-primary mt-3 text-white'>
     <div className='row text-center'>
             <div className='col offset-md-3 col-md-5'>
                 <h1>Edit Notes</h1>
